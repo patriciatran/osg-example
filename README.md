@@ -12,8 +12,9 @@ This file is called `test123.sub` and the parameters file is `parameters.csv`
 **Important note**
 
 In the submit file we have line that says 
-"transfer_output_remaps = "output.txt=P$(P)/$(variable)/$(p)_$(variable)_$(number).txt"
-the folder `P$(P)/$(variable)/` does NOT need to preexist. 
+`transfer_output_remaps = "output.txt=P$(P)/$(variable)/$(p)_$(variable)_$(number).txt`
+
+The folder `P$(P)/$(variable)/` does *NOT* need to preexist. 
 HTcondor will run the job and put it there in the correct spot.
 
 ## Step 2. 
