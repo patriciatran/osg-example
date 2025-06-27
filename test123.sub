@@ -1,0 +1,15 @@
+executable = test123.sh
+
+output= logs/test_$(Cluster)_$(Process).out 
+error= logs/test_$(Cluster)_$(Process).err
+log= logs/test_$(Cluster)_$(Process).log
+
+request_cpus = 1
+request_memory = 5MB
+request_disk = 5MB
+
+transfer_input = 
+transfer_output_files = output.txt
+transfer_output_remaps = "output.txt=P$(P)/$(variable)/$(p)_$(variable)_$(number).txt"
+
+queue P,variable,number from parameters.csv
